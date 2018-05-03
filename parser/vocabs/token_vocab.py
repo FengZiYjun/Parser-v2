@@ -69,7 +69,7 @@ class TokenVocab(BaseVocab):
     del self._embeddings
     with tf.device('/cpu:0'):
       with tf.variable_scope(self.name.title()):
-        self._embeddings = tf.Variable(self._embeddings_array, name='Embeddings', dtype=tf.float32, trainable=True)
+        self._embeddings = tf.Variable(self._embeddings_array, name='Embeddings', dtype=tf.float32, trainable=False) # change here !
     return
 
   
